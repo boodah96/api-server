@@ -1,0 +1,156 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "defaultDescription",
+        "version": "0.1",
+        "title": "API-server"
+    },
+    "paths": {
+        "/api/v1/clothes/": {
+            "get": {
+                "produces": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model5"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "required": false,
+                    "schema": {
+                        "$ref": "#/definitions/Model0"
+                    },
+                    "x-examples": {
+                        "application/json": "{\n       \n        \"name\": \"T-SHIRT\"\n    \n    }"
+                    }
+                }],
+                "responses": {
+                    "201": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model4"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/clothes/606b98b1be4b7f3228552d98": {
+            "delete": {
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "required": false,
+                    "schema": {
+                        "$ref": "#/definitions/Model1"
+                    },
+                    "x-examples": {
+                        "application/json": "{\n       \n        \"name\": \"T-SHIRT\"\n    \n    }"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Definition generated from Swagger Inspector",
+                        "schema": {
+                            "$ref": "#/definitions/Model3"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Model0": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Model1": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Array": {
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "__v": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model2": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Array"
+            }
+        },
+        "Model3": {
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "__v": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model4": {
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "__v": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model5_Array": {
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "__v": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "Model5": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Model5_Array"
+            }
+        }
+    }
+}
